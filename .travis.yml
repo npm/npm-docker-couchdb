@@ -1,0 +1,17 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t npmjs/npm-docker-couchdb:$COUCH_VERSION .
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push npmjs/npm-docker-couchdb:$COUCH_VERSION;
+    fi
+
+env:
+    matrix :
+        - COUCH_VERSION: '1.6.1'

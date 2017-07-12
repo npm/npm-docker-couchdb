@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+.idea
+dump.rdb
+erl_crash.dump
+npm-debug.log
+*.swp
+tmp
+Dockerfile.version
