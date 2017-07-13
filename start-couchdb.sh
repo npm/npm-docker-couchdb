@@ -1,7 +1,4 @@
 #!/bin/bash
-
+set -e
 ./install-couch-app.sh &
-couchdb &
-wait $!
-kill 0
-exit 1
+couchdb
