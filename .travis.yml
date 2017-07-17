@@ -1,9 +1,9 @@
 sudo: required
-
-services:
-  - docker
+language: node_js
 node_js:
   - '6'
+services:
+  - docker
 script:
   - 'echo "TODO: add integration tests"'
 
