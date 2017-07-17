@@ -5,7 +5,7 @@ services:
 node_js:
   - '6'
 script:
-  - echo 'TODO: add integration tests'
+  - 'echo "TODO: add integration tests"'
 
 after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
