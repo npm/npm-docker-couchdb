@@ -2,16 +2,11 @@ sudo: required
 
 services:
   - docker
-
+node_js:
+  - '6'
 script:
-  - docker build -t npmjs/npm-docker-couchdb:$COUCH_VERSION .
+  - echo 'TODO: add integration tests'
 
 after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push npmjs/npm-docker-couchdb:$COUCH_VERSION;
-    fi
-
-env:
-    matrix :
-        - COUCH_VERSION: '1.6.1'
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - dockyard build image --repo=npmjs --name=npm-docker-couchdb
