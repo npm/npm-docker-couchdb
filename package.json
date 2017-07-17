@@ -1,0 +1,19 @@
+{
+  "name": "npm-docker-couchdb",
+  "version": "1.0.0",
+  "description": "The CouchDB image used by npme cloud:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/npm-docker-couchdb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/npm-docker-couchdb/issues"
+  },
+  "homepage": "https://github.com/npm/npm-docker-couchdb#readme"
+}
