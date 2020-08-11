@@ -12,4 +12,4 @@ before_script:
 
 after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - shipwright build image --repo=npmjs --name=npm-docker-couchdb
+  - shipwright build image --repo=npmjs --name=npm-docker-couchdb --tags=lm,v_s,v,miv,ma,b,b_v_c_s
