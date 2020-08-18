@@ -92,6 +92,8 @@ WORKDIR /var/lib/couchdb
 
 COPY ./start-couchdb.sh /var/lib/couchdb
 COPY ./install-couch-app.sh /var/lib/couchdb
+COPY ./remove-couch-app.sh /var/lib/couchdb
+COPY ./purge-app.js /var/lib/couchdb
 COPY local.ini /usr/local/etc/couchdb/local.d/
 
 RUN npm install npm-registry-couchapp@npmo
