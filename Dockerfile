@@ -20,6 +20,7 @@ MAINTAINER Ben Coe ben@npmjs.com
 RUN groupadd -r couchdb && useradd -d /var/lib/couchdb -g couchdb couchdb
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends \
+    vim \
     ca-certificates \
     curl \
     erlang-nox \
